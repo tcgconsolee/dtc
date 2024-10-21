@@ -1,0 +1,1 @@
+document.body.style.transform = `scale(${document.documentElement.clientWidth/1920}, ${document.documentElement.clientHeight/1080})`
