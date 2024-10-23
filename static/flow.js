@@ -269,11 +269,11 @@ document.getElementsByClassName("uname-replace")[0].addEventListener('keypress',
 function changeDim(elem) {
     if(elem.computedStyleMap().get('width').value==="auto"||elem.computedStyleMap().get('left').value==="auto"||elem.computedStyleMap().get('height').value==="auto"||elem.computedStyleMap().get('top').value==="auto") return;
     console.log(elem.computedStyleMap().get('width').value)
-    elem.width = elem.computedStyleMap().get('width').value * 1366/1920 +"px";
-    elem.left = elem.computedStyleMap().get('left').value*1366/1920 + "px";
-    elem.height = elem.computedStyleMap().get('height').value*768/1080 + "px";
-    elem.top = elem.computedStyleMap().get('top').value*768/1080 + "px";
+    elem.style.width = elem.computedStyleMap().get('width').value * 1366/1920 +"px";
+    elem.style.left = elem.computedStyleMap().get('left').value*1366/1920 + "px";
+    elem.style.height = elem.computedStyleMap().get('height').value*768/1080 + "px";
+    elem.style.top = elem.computedStyleMap().get('top').value*768/1080 + "px";
 }
-document.querySelectorAll(".home > *").forEach((elem) => {
+document.querySelectorAll("home >*").forEach((elem) => {
     changeDim(elem)
 })
