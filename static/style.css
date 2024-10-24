@@ -713,7 +713,8 @@ input:active {
 .evt-ctgories {
     display: grid;
     position: absolute;
-    left: 2em;
+    left: 50%;
+    transform: translateX(-50%);
     width: 86.5%;
     height: 3em;
     top: 105%;
@@ -760,7 +761,8 @@ input:active {
     display: grid;
     position: absolute;
     top: 120%;
-    left: 2em;
+    left: 50%;
+    transform: translate(-50%);
     width: min-content;
     grid-template-columns: auto auto auto auto;
     column-gap: 1em;
