@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <div class="home">
         <div class="nav">
             <div class="nav-left">
@@ -24,17 +23,17 @@
                 </div>
             </div>
             <div class="nav-right">
-                <div class="nav-item">
+                <div class="nav-item nav-heart">
                     <img src="../static/imgs/heart.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item">
+                <div class="nav-item to-chat">
                     <img src="../static/imgs/chat.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item" style="display:none;">
-                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link" class="active">
+                <div class="nav-item active" style="display:none;">
+                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item">
-                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link" class="inactive">
+                <div class="nav-item inactive">
+                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link">
                 </div>
                 <div class="nav-item" onclick="window.location.href = '/login'">
                     <div class="round"></div>
@@ -82,27 +81,27 @@
         <div class="nav">
             <div class="nav-left">
                 <div class="nav-item">
-                    <img src="../static/imgs/logo.svg" class="nav-logo" alt="" class="to-home">
+                    <img src="../static/imgs/logo.svg" class="nav-logo to-home" alt="">
                 </div>
                 <div class="nav-item">
-                    <p class="nav-link" class="to-proj">PROJECTS</p>
+                    <p class="nav-link to-proj">PROJECTS</p>
                 </div>
                 <div class="nav-item">
-                    <p class="nav-link" class="to-events">EVENTS</p>
+                    <p class="nav-link to-events">EVENTS</p>
                 </div>
             </div>
             <div class="nav-right">
-                <div class="nav-item">
+                <div class="nav-item nav-heart">
                     <img src="../static/imgs/heart.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item">
+                <div class="nav-item to-chat">
                     <img src="../static/imgs/chat.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item" style="display:none;">
-                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link" class="active">
+                <div class="nav-item active" style="display:none;">
+                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item">
-                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link" class="inactive">
+                <div class="nav-item inactive">
+                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link">
                 </div>
                 <div class="nav-item" onclick="window.location.href = '/login'">
                     <div class="round"></div>
@@ -111,21 +110,17 @@
         </div>
         <div class="s-nav">
             <div class="sn-sbar">
-                <div class="sbar">
+                <div class="sbar" id = "projects1">
                     <img src="../static/imgs/search.svg" alt="" class="sbar-icon">
-                    <input type="text" placeholder="Search for anything..">
+                    <input type="text" placeholder="Search for anything.." id = "projects2">
                 </div>
             </div>
             <div class="sn-dropdown">
-                <div class="dropdown">
-                    <p>Design</p>
-                    <img src="../static/imgs/dropdown.svg" alt="" class="drop-icon">
-                </div>
-            </div>
-            <div class="sn-filter">
-                <div class="filter">
-                    <img src="../static/imgs/filter.svg" alt="" class="filter-icon">
-                </div>
+                <select class="dropdown">
+                    <option value="All" selected="selected">All</option>
+                    <option value="Design">Design</option>
+                    <option value="Webdev">Webdev</option>
+                </select>
             </div>
         </div>
         <div class="featured">
@@ -140,15 +135,9 @@
                     <div class="pr-tag">
                         <p>WEBDEV</p>
                     </div>
-                    <div class="pr-tag">
-                        <p>DESIGN</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
                 </div>
                 <div class="pr-name">
-                    <p>PROJECT NAME</p>
+                    <p>Portfolio</p>
                 </div>
                 <div class="pr-ppl">
                     <div class="pr-persons">
@@ -159,7 +148,37 @@
                     </div>
                 </div>
                 <div class="pr-favs">
-                    <img src="../static/imgs/hollow_heart.svg" alt="">
+                    <img src="../static/imgs/hollow_heart.svg" class = "hollow" alt="">
+                    <img src="../static/imgs/heart.svg" class = "filled" alt="" style = "display:none">
+                    <p>236</p>
+                </div>
+                <div class="pr-share">
+                    <img src="../static/imgs/share.svg" alt="">
+                </div>
+            </div>
+            <div class="project">
+                <div class="pr-pic">
+                    <img src="../static/imgs/project.svg" alt="" id="pic">
+                </div>
+                <div class="pr-tags">
+                    <div class="pr-tag">
+                        <p>DESIGN</p>
+                    </div>
+                </div>
+                <div class="pr-name">
+                    <p>Mobile App Design</p>
+                </div>
+                <div class="pr-ppl">
+                    <div class="pr-persons">
+                        <img src="../static/imgs/persons.svg" alt="">
+                    </div>
+                    <div class="pr-more">
+                        <p>+2 more</p>
+                    </div>
+                </div>
+                <div class="pr-favs">
+                    <img src="../static/imgs/hollow_heart.svg" class = "hollow" alt="">
+                    <img src="../static/imgs/heart.svg" class = "filled" alt="" style = "display:none">
                     <p>236</p>
                 </div>
                 <div class="pr-share">
@@ -177,23 +196,82 @@
                     <div class="pr-tag">
                         <p>DESIGN</p>
                     </div>
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
                 </div>
                 <div class="pr-name">
-                    <p>PROJECT NAME</p>
+                    <p>Website with Login</p>
                 </div>
                 <div class="pr-ppl">
                     <div class="pr-persons">
-                        <img src="../static/imgs/people.svg" alt="">
+                        <img src="../static/imgs/persons.svg" alt="">
                     </div>
                     <div class="pr-more">
                         <p>+2 more</p>
                     </div>
                 </div>
                 <div class="pr-favs">
-                    <img src="../static/imgs/hollow_heart.svg" alt="">
+                    <img src="../static/imgs/hollow_heart.svg" class = "hollow" alt="">
+                    <img src="../static/imgs/heart.svg" class = "filled" alt="" style = "display:none">
+                    <p>236</p>
+                </div>
+                <div class="pr-share">
+                    <img src="../static/imgs/share.svg" alt="">
+                </div>
+            </div>
+            <div class="project">
+                <div class="pr-pic">
+                    <img src="../static/imgs/project.svg" alt="" id="pic">
+                </div>
+                <div class="pr-tags">
+                    <div class="pr-tag">
+                        <p>DESIGN</p>
+                    </div>
+                </div>
+                <div class="pr-name">
+                    <p>Track</p>
+                </div>
+                <div class="pr-ppl">
+                    <div class="pr-persons">
+                        <img src="../static/imgs/persons.svg" alt="">
+                    </div>
+                    <div class="pr-more">
+                        <p>+2 more</p>
+                    </div>
+                </div>
+                <div class="pr-favs">
+                    <img src="../static/imgs/hollow_heart.svg" class = "hollow" alt="">
+                    <img src="../static/imgs/heart.svg" class = "filled" alt="" style = "display:none">
+                    <p>236</p>
+                </div>
+                <div class="pr-share">
+                    <img src="../static/imgs/share.svg" alt="">
+                </div>
+            </div>
+            <div class="project">
+                <div class="pr-pic">
+                    <img src="../static/imgs/project.svg" alt="" id="pic">
+                </div>
+                <div class="pr-tags">
+                    <div class="pr-tag">
+                        <p>DESIGN</p>
+                    </div>
+                    <div class="pr-tag">
+                        <p>WEBDEV</p>
+                    </div>
+                </div>
+                <div class="pr-name">
+                    <p>Aurorae</p>
+                </div>
+                <div class="pr-ppl">
+                    <div class="pr-persons">
+                        <img src="../static/imgs/persons.svg" alt="">
+                    </div>
+                    <div class="pr-more">
+                        <p>+2 more</p>
+                    </div>
+                </div>
+                <div class="pr-favs">
+                    <img src="../static/imgs/hollow_heart.svg" class = "hollow" alt="">
+                    <img src="../static/imgs/heart.svg" class = "filled" alt="" style = "display:none">
                     <p>236</p>
                 </div>
                 <div class="pr-share">
@@ -208,128 +286,21 @@
                     <div class="pr-tag">
                         <p>WEBDEV</p>
                     </div>
-                    <div class="pr-tag">
-                        <p>DESIGN</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
                 </div>
                 <div class="pr-name">
-                    <p>PROJECT NAME</p>
+                    <p>Sonora</p>
                 </div>
                 <div class="pr-ppl">
                     <div class="pr-persons">
-                        <img src="../static/imgs/people.svg" alt="">
+                        <img src="../static/imgs/persons.svg" alt="">
                     </div>
                     <div class="pr-more">
                         <p>+2 more</p>
                     </div>
                 </div>
                 <div class="pr-favs">
-                    <img src="../static/imgs/hollow_heart.svg" alt="">
-                    <p>236</p>
-                </div>
-                <div class="pr-share">
-                    <img src="../static/imgs/share.svg" alt="">
-                </div>
-            </div>
-            <div class="project">
-                <div class="pr-pic">
-                    <img src="../static/imgs/project.svg" alt="" id="pic">
-                </div>
-                <div class="pr-tags">
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>DESIGN</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
-                </div>
-                <div class="pr-name">
-                    <p>PROJECT NAME</p>
-                </div>
-                <div class="pr-ppl">
-                    <div class="pr-persons">
-                        <img src="../static/imgs/people.svg" alt="">
-                    </div>
-                    <div class="pr-more">
-                        <p>+2 more</p>
-                    </div>
-                </div>
-                <div class="pr-favs">
-                    <img src="../static/imgs/hollow_heart.svg" alt="">
-                    <p>236</p>
-                </div>
-                <div class="pr-share">
-                    <img src="../static/imgs/share.svg" alt="">
-                </div>
-            </div>
-            <div class="project">
-                <div class="pr-pic">
-                    <img src="../static/imgs/project.svg" alt="" id="pic">
-                </div>
-                <div class="pr-tags">
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>DESIGN</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
-                </div>
-                <div class="pr-name">
-                    <p>PROJECT NAME</p>
-                </div>
-                <div class="pr-ppl">
-                    <div class="pr-persons">
-                        <img src="../static/imgs/people.svg" alt="">
-                    </div>
-                    <div class="pr-more">
-                        <p>+2 more</p>
-                    </div>
-                </div>
-                <div class="pr-favs">
-                    <img src="../static/imgs/hollow_heart.svg" alt="">
-                    <p>236</p>
-                </div>
-                <div class="pr-share">
-                    <img src="../static/imgs/share.svg" alt="">
-                </div>
-            </div>
-            <div class="project">
-                <div class="pr-pic">
-                    <img src="../static/imgs/project.svg" alt="" id="pic">
-                </div>
-                <div class="pr-tags">
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>DESIGN</p>
-                    </div>
-                    <div class="pr-tag">
-                        <p>WEBDEV</p>
-                    </div>
-                </div>
-                <div class="pr-name">
-                    <p>PROJECT NAME</p>
-                </div>
-                <div class="pr-ppl">
-                    <div class="pr-persons">
-                        <img src="../static/imgs/people.svg" alt="">
-                    </div>
-                    <div class="pr-more">
-                        <p>+2 more</p>
-                    </div>
-                </div>
-                <div class="pr-favs">
-                    <img src="../static/imgs/hollow_heart.svg" alt="">
+                    <img src="../static/imgs/hollow_heart.svg" class = "hollow" alt="">
+                    <img src="../static/imgs/heart.svg" class = "filled" alt="" style = "display:none">
                     <p>236</p>
                 </div>
                 <div class="pr-share">
@@ -352,17 +323,17 @@
                 </div>
             </div>
             <div class="nav-right">
-                <div class="nav-item">
+                <div class="nav-item nav-heart">
                     <img src="../static/imgs/heart.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item">
+                <div class="nav-item to-chat">
                     <img src="../static/imgs/chat.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item" style="display:none;">
-                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link" class="active">
+                <div class="nav-item active" style="display:none;">
+                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link">
                 </div>
-                <div class="nav-item">
-                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link" class="inactive">
+                <div class="nav-item inactive">
+                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link">
                 </div>
                 <div class="nav-item" onclick="window.location.href = '/login'">
                     <div class="round"></div>
@@ -372,14 +343,9 @@
         <img src="../static/imgs/banner.svg" alt="" class="bg">
         <div class="s-nav2">
             <div class="sn-sbar">
-                <div class="sbar">
+                <div class="sbar" id="events1">
                     <img src="../static/imgs/search.svg" alt="" class="sbar-icon">
-                    <input type="text" placeholder="Search for anything..">
-                </div>
-            </div>
-            <div class="sn-filter">
-                <div class="filter">
-                    <img src="../static/imgs/filter.svg" alt="" class="filter-icon">
+                    <input type="text" placeholder="Search for anything.." id="events2">
                 </div>
             </div>
         </div>
@@ -397,10 +363,10 @@
             </div>
             <div class="hevt-main">
                 <div class="hevt-name">
-                    <p>nCrypt Inter</p>
+                    <p>Nexus</p>
                 </div>
                 <div class="hevt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "roundedh">
                 </div>
             </div>
 
@@ -412,7 +378,7 @@
                 <img src="../static/imgs/location.svg" alt="">
                 <p><strong>DPS Sushant Lok,</strong> Harayana</p>
             </div>
-            <div class="hevt-btn">
+            <div class="hevt-btn" onclick="window.open('../static/resources/Brochure.pdf', '_blank').focus()">
                 <p class="details">All details</p>
                 <img src="../static/imgs/goto.svg" alt="">
             </div>
@@ -422,10 +388,7 @@
                 <p>About</p>
             </div>
             <div class="about-description">
-                <p>dCrypt 2025 is back with its all new battlefield format to make it a cryptic hunt in a league of its
-                    own. We have developed a platform that combines solving questions with a strategic wargame that will
-                    test both the participants ability to gain points by solving, while also using resources in a
-                    tactical manner.</p>
+                <p>Digital Nexus is a premier gathering of tech enthusiasts and innovators. It is a dynamic platform where cutting-edge technology meets real-world applications, and the brightest minds in the industry come together to explore the future of tech.</p>
             </div>
             <div class="about-files-txt">
                 <p>Attachments</p>
@@ -433,8 +396,7 @@
             <div class="about-files">
                 <img src="../static/imgs/file.svg" alt="" class="file">
                 <p class="brochure">Brochure.pdf</p>
-                <a href="https://docs.google.com/document/d/1nl6HtDru0USbwef-KkQPR_QBr7AYaftkVtGsPtf9iB4/edit?tab=t.0"
-                    target="_blank">
+                <a href="../static/resources/Brochure.pdf" download>
                     <img src="../static/imgs/download.svg" class="download">
                 </a>
             </div>
@@ -475,17 +437,17 @@
             </div>
         </div>
         <div class="event-container">
-            <div class="event">
+            <div class="event" data-type="competitions">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>nCreate 2024-2025</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Create and design a web-app, on prompts!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -496,20 +458,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="hackathons">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>Bidvertise</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Make your team and take a part in this!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -520,20 +482,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="assessments">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>WIT Entrance Examination</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>An entrance examination based on tech!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -544,20 +506,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="scholarships">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>WIT Scholarship Exam</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Get up to 20% off on the total fees!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -568,20 +530,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="workshops">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>California Workshop</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Build together with your self-made team!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -592,20 +554,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="conferences">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>Fields of Fortune</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Talk about recently occuring events in tech!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -616,20 +578,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="cultural events">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>Our Bharat</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Join in on the hindu cultural event!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -640,20 +602,20 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
-            <div class="event">
+            <div class="event" data-type="assessments">
                 <div class="evt-banner"></div>
                 <div class="evt-pic"></div>
                 <div class="evt-status">
                     <p>Offline | Free</p>
                 </div>
                 <div class="evt-name">
-                    <p>Lorem Ipsum Dolor</p>
+                    <p>TUM Entrance Exam</p>
                 </div>
                 <div class="evt-desc">
-                    <p>Description</p>
+                    <p>Join the Tech University of Michigan!</p>
                 </div>
                 <div class="evt-applied">
                     <img src="../static/imgs/people.svg" alt="">
@@ -664,9 +626,143 @@
                     <p>12 days left</p>
                 </div>
                 <div class="evt-fav">
-                    <img src="../static/imgs/rounded_heart.svg" alt="">
+                    <img src="../static/imgs/rounded_heart.svg" alt="" class = "rounded">
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="chat">
+        <div class="nav">
+            <div class="nav-left">
+                <div class="nav-item">
+                    <img src="../static/imgs/logo.svg" class="nav-logo to-home" alt="">
+                </div>
+                <div class="nav-item to-proj">
+                    <p class="nav-link">PROJECTS</p>
+                </div>
+                <div class="nav-item to-events">
+                    <p class="nav-link">EVENTS</p>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="nav-item nav-heart">
+                    <img src="../static/imgs/heart.svg" alt="" class="nav-link">
+                </div>
+                <div class="nav-item to-chat">
+                    <img src="../static/imgs/chat.svg" alt="" class="nav-link">
+                </div>
+                <div class="nav-item active" style="display:none;">
+                    <img src="../static/imgs/notifications-active.svg" alt="" class="nav-link">
+                </div>
+                <div class="nav-item inactive">
+                    <img src="../static/imgs/notifications-inactive.svg" alt="" class="nav-link">
+                </div>
+                <div class="nav-item" onclick="window.location.href = '/login'">
+                    <div class="round"></div>
+                </div>
+            </div>
+        </div>
+        <div class="chat-container">
+            <div class="msgs-container">
+                <div class="msgs-text">
+                    <p>Messages</p>
+                </div>
+                <div class="s-nav3">
+                    <div class="sn-sbar">
+                        <div class="sbar" id = "groups">
+                            <img src="../static/imgs/search.svg" alt="" class="sbar-icon">
+                            <input type="text" placeholder="Search for anything.." class = "sbar-text" id = "groups2">
+                        </div>
+                    </div>
+                </div>
+                <div class="grps">
+                    <div class="grp">
+                        <div class="grp-pic"></div>
+                        <div class="grp-name">Aniket</div>
+                    </div>
+                    <div class="grp">
+                        <div class="grp-pic"></div>
+                        <div class="grp-name">Name 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="spacing"></div>
+            <div class="chats">
+                <div class="details-receiver">
+                    <div class="rcver-pic"></div>
+                    <div class="rcver-name">
+                        <p>Aniket</p>
+                    </div>
+                    <div class="rcver-vc">
+                        <img src="../static/imgs/vc.svg" alt="">
+                    </div>
+                    <div class="rcver-video">
+                        <img src="../static/imgs/video.svg" alt="">
+                    </div>
+                </div>
+                <hr>
+                <div class="msg-container">
+                    <div class="msg" id = "rcv">
+                        <div class="msg-pic" id = "rcv-pic"></div>
+                        <div class="msg-content" id = "rcv-msg">
+                            <p>banana apple papaya</p>
+                        </div>
+                    </div>
+                    <div class="msg" id = "s">
+                        <div class="msg-pic" id = "s-pic"></div>
+                        <div class="msg-content" id = "s-msg">
+                            <p>banana apple papaya</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-bar">
+                    <div class="mt">
+                        <img src="../static/imgs/emoji.svg" alt="">
+                        <input type="text" placeholder = "Message" id = "m">
+                    </div>
+                    <div class="ma">
+                        <img src="../static/imgs/vm.svg" alt="">
+                        <img src="../static/imgs/plus.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="notifications">
+        <div class="notif-del">
+            <img src="../static/imgs/delete.svg" alt="">
+        </div>
+        <div class="notif-text">
+            <p>Notifications</p>
+        </div>
+        <div class="notification">
+            <div class="notif-pic"></div>
+            <div class="notif-det">
+                <p>XXX sent you a message.</p>
+            </div>
+        </div>
+        <div class="notification">
+            <div class="notif-pic"></div>
+            <div class="notif-det">
+                <p>XXX sent you a message.</p>
+            </div>
+        </div>
+        <div class="notification">
+            <div class="notif-pic"></div>
+            <div class="notif-det">
+                <p>XXX sent you a message.</p>
+            </div>
+        </div>
+    </div>
+    <div class="watchlist">
+        <div class="watch-txt">
+            <p>WATCHLIST</p>
+        </div>
+        <div class="watch-proj">
+            <p>PROJECTS</p>
+        </div>
+        <div class="watch-eve">
+            <p>EVENTS</p>
         </div>
     </div>
 </body>

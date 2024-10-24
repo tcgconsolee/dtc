@@ -8,7 +8,35 @@
 <body>
     <div class="login">
         <div class="lsimg">
-            <img src="/static/imgs/" alt="">
+            <img src="../static/imgs/login.svg" alt="">
+        </div>
+        <div class="content-div">
+            <div class="lslogo">
+                <img src="../static/imgs/logo.svg" alt="">
+            </div>
+            <div class="lsdtc">
+                <p>DELHI TECH CIRCUIT</p>
+            </div>
+            <div class="lswlc">
+                <p>Welcome Back</p>
+            </div>
+            <form action="#" method = "post">
+                <input type="text" id = "lsuname" placeholder="Username or E-Mail" name = "username"><br>
+                <input type="password" id = "lspass" placeholder="Password" name = "password">
+                <p class="lsforgot">Forgot your password?</p>
+                <input type="submit" id ="lssubmit" value = "Log In">
+            </form>
+            <div class="sociallogin" id = "google-login">
+                <img src="../static/imgs/google.svg" alt="">
+                <p>Continue with Google</p>
+            </div>
+            <div class="sociallogin" id="discord-login">
+                <img src="../static/imgs/discord.svg" alt="">
+                <p>Continue with Discord</p>
+            </div>
+            <a class="redir-sign-up" href = "register">
+                <p>Don't have an account? <span>Join</span></p>
+            </a>
         </div>
     </div>
 </body>
