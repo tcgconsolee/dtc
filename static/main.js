@@ -28,33 +28,6 @@ $(".to-chat").click(function () {
 })
 
 // OTHER
-$(".project").each(function(i){
-    $(this).click(function () {
-        let project = $(this).clone()
-        let project_open =
-            `<div class = 'project-open'>
-                <div class = "cross">
-                    <img src = "../static/imgs/close.svg" alt = "">
-                </div>
-            </div>
-            <div class = "blurrer"></div>
-            `
-        $(".projects").append(project_open)
-        $(".project-open").prepend(project)
-        $(".cross").click(function(){
-            console.log("e")
-            $(".project-open").remove();
-            $(".blurrer").remove();
-        })
-        $(".project-open .project .pr-favs .hollow").click(function () {
-            $(".project-open .project .pr-favs .hollow").css("display", "none")
-            $(".project-open .project .pr-favs .filled").css("display", "block")
-            $(".hollow").eq(i).css("display", "none")
-            $(".filled").eq(i).css("display", "block")
-            addToWatchList($(".project-open .project .pr-name").html(), "project")
-        })
-    })
-})
 $(".dropdown").click(function() {
     $(".pr-tags").each(function(i) {
         if($(".dropdown").find(":selected").text().toLowerCase()=="all") {
